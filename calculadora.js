@@ -1,15 +1,24 @@
-const display = document.getElementById("display");
+const display = document.getElementById('display');
+const bottons = document.querySelector('button');
 
-const bottons = document.querySelector("button");
+// let elem = document.childNodes;
+// console.dir(elem);
+//console.log(bottons.target.value);
 
 //diplay
 const toDisplay = (value) => {
-  display.value += value;
+  bottons.target.value += value;
 };
+
+document.addEventListener('click', (bottons) => {
+  value += bottons.target.value;
+  console.log(value);
+});
+
 //limpia diplay
-const clearDisplay = () => {
-  display.value = "";
-};
+// const clearDisplay = () => {
+//   display.value = '';
+// };
 //preparar array
 const newExpression = (expression) => {
   const regex = /(\d+(\.\d+)?)\s*([*/+-](\d+(\.\d+)?))+/g;
@@ -19,10 +28,10 @@ const newExpression = (expression) => {
 const calcolateResult = () => {
   try {
     const expression = display.value;
-    const result = evaluateExpression(expression);
+    const result = evaluateExpression(expression); //<= attento!
     display.value = result;
   } catch (error) {
-    display.value = "ERRORE";
+    display.value = 'ERRORE';
   }
 };
 //calcolatrice
@@ -32,20 +41,20 @@ const calculate = (parts) => {
     const operator = parts[i];
     const operand = parseFloat(parts[i + 1]);
     switch (operator) {
-      case "+":
+      case '+':
         result += operand;
         break;
-      case "-":
+      case '-':
         result -= operand;
         break;
-      case "*":
+      case '*':
         result *= operand;
         break;
-      case "/":
+      case '/':
         result /= operand;
         break;
       default:
-        throw new Error("Operatore non valido");
+        throw new Error('Operatore non valido');
     }
   }
   return result;
