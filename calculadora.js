@@ -11,6 +11,7 @@ const toDisplay = (value) => {
 };
 
 document.addEventListener('click', (bottons) => {
+  value = [];
   value += bottons.target.value;
   console.log(value);
 });

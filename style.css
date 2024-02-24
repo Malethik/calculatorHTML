@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   background-color: #355655;
 }
 
 @font-face {
-  font-family: "Digital-7 Mono";
-  src: url("digital-7\ \(mono\).ttf");
+  font-family: 'Digital-7 Mono';
+  src: url('digital-7\ \(mono\).ttf');
 }
 
 h1 {
@@ -35,12 +35,12 @@ h1 {
 #total {
   grid-column-start: 3;
   grid-column-end: span 2;
-  width: 163px;
+  width: 150px;
 }
 
 #display {
   background-color: #38c0bb;
-  font-family: "Digital-7 Mono", sans-serif;
+  font-family: 'Digital-7 Mono', sans-serif;
   padding: 25px;
   font-size: 75px;
   border-bottom: 1px solid black;
