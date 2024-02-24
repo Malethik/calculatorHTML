@@ -1,5 +1,6 @@
 const display = document.getElementById('display');
-const bottons = document.querySelector('button');
+const bottons = document.querySelector('.button');
+console.log(bottons);
 
 // let elem = document.childNodes;
 // console.dir(elem);
@@ -8,6 +9,7 @@ const bottons = document.querySelector('button');
 //diplay
 const toDisplay = (value) => {
   bottons.target.value += value;
+  console.log(toDisplay);
 };
 
 document.addEventListener('click', (bottons) => {

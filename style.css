@@ -35,7 +35,7 @@ h1 {
 #total {
   grid-column-start: 3;
   grid-column-end: span 2;
-  width: 150px;
+  width: 164px;
 }
 
 #display {
